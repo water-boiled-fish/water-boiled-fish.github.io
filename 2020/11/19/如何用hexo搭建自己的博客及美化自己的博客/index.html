@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="Water-Boiled-fish"><meta name="copyright" content="Water-Boiled-fish"><meta name="generator" content="Hexo 5.2.0"><meta name="theme" content="hexo-theme-yun"><title>如何用hexo搭建自己的博客及美化自己的博客 | 水煮鱼の废柴屋</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.1.22/dist/yun/yun-markdown.min.css"><script src="//at.alicdn.com/t/font_1140697_ed8vp4atwoj.js" async></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>document.addEventListener("DOMContentLoaded", () => {
+  [".post-card",".post-content img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+});
+</script><link rel="shortcut icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="alternate icon" href="/yun.ico"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script id="yun-config">
+    const Yun = window.Yun || {};
+    window.CONFIG = {"hostname":"example.com","root":"/","title":"水煮鱼的小站","version":"1.3.0","mode":"auto","copycode":true,"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><meta name="description" content="如何用hexo搭建自己的博客及美化自己的博客这是我配好环境使用hexo写的第一篇博客 这里特别感谢各位大佬们的支持与帮助ε≡٩(๑&gt;₃&lt;)۶ ### 配置相关环境 要想创建自己的hexo博客需要配置相关的环境（我前几次就经常把环境搞炸），接下来开始配置创建博客所必须的环境 过程来源: Gaein nidb，Code Sheep. 相关视频链接: https:&#x2F;&#x2F;www.bilibili">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何用hexo搭建自己的博客及美化自己的博客">
+<meta property="og:url" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="水煮鱼の废柴屋">
+<meta property="og:description" content="如何用hexo搭建自己的博客及美化自己的博客这是我配好环境使用hexo写的第一篇博客 这里特别感谢各位大佬们的支持与帮助ε≡٩(๑&gt;₃&lt;)۶ ### 配置相关环境 要想创建自己的hexo博客需要配置相关的环境（我前几次就经常把环境搞炸），接下来开始配置创建博客所必须的环境 过程来源: Gaein nidb，Code Sheep. 相关视频链接: https:&#x2F;&#x2F;www.bilibili">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/2.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/3.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/4.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/5.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/6.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/7.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/8.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/9.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/10.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/11.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/12.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/13.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/14.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/15.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/16.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/17.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/18.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/19.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/20.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/21.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/22.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/23.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/24.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E7%85%A7%E7%89%87%E7%9A%84%E5%90%8D%E5%AD%97.%E7%85%A7%E7%89%87%E7%9A%84%E6%A0%BC%E5%BC%8F">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/25.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/26.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/27.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/28.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/29.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/30.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/31.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/32.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/26.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/27.png">
+<meta property="og:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/28.png">
+<meta property="article:published_time" content="2020-11-19T07:05:01.259Z">
+<meta property="article:modified_time" content="2020-11-26T02:58:44.575Z">
+<meta property="article:author" content="Water-Boiled-fish">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.png"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info mickey-mouse"><a class="site-author-avatar" href="/about/" title="Water-Boiled-fish"><img width="96" loading="lazy" src="/Yun.png" alt="Water-Boiled-fish"><span class="site-author-status" title="不管身处何方都需要努力">♀</span></a><div class="site-author-name"><a href="/about/">Water-Boiled-fish</a></div><a class="site-name" href="/about/site.html">水煮鱼の废柴屋</a><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">2</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">0</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">0</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=epvxdq1sknJe9JMj6J1LsBw4a6cI_2ln&amp;jump_from=webapi" title="QQ 群 389401003" target="_blank" style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/YunYouJun" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://weibo.com/jizhideyunyoujun" title="微博" target="_blank" style="color:#E6162D"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weibo-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.douban.com/people/yunyoujun/" title="豆瓣" target="_blank" style="color:#007722"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douban-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=247102977" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/yunyoujun/" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/1579790" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://twitter.com/YunYouJun" title="Twitter" target="_blank" style="color:#1da1f2"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-twitter-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://t.me/elpsycn" title="Telegram Channel" target="_blank" style="color:#0088CC"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-telegram-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:me@yunyoujun.cn" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://travellings.now.sh/" title="Travelling" target="_blank" style="color:var(--hty-text-color)"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-send-plane-2-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text">如何用hexo搭建自己的博客及美化自己的博客</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Water-Boiled-fish"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="水煮鱼の废柴屋"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">如何用hexo搭建自己的博客及美化自己的博客</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <span class="post-meta-icon-text">发表于</span> <time title="创建时间：2020-11-19 15:05:01" itemprop="dateCreated datePublished" datetime="2020-11-19T15:05:01+08:00">2020-11-19</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <span class="post-meta-icon-text">更新于</span> <time title="修改时间：2020-11-26 10:58:44" itemprop="dateModified" datetime="2020-11-26T10:58:44+08:00">2020-11-26</time></div><div class="post-classify"></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7;"><h1 id="如何用hexo搭建自己的博客及美化自己的博客"><a href="#如何用hexo搭建自己的博客及美化自己的博客" class="headerlink" title="如何用hexo搭建自己的博客及美化自己的博客"></a>如何用hexo搭建自己的博客及美化自己的博客</h1><p>这是我配好环境使用hexo写的第一篇博客</p>
+<p>这里特别感谢各位大佬们的支持与帮助ε≡٩(๑&gt;₃&lt;)۶</p>
+<p><strong>### 配置相关环境</strong></p>
+<p>要想创建自己的hexo博客需要配置相关的环境（我前几次就经常把环境搞炸），接下来开始配置创建博客所必须的环境</p>
+<p>过程来源: Gaein nidb，Code Sheep.</p>
+<p>相关视频链接: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=4666682153927695444">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=4666682153927695444</a></p>
+<p><strong>##### 安装Node.js</strong></p>
+<p>可以去<a target="_blank" rel="noopener" href="https://www.nodejs.org/">https://www.nodejs.org</a> 网址下载</p>
+<p><img src="1.png" alt="aaa" loading="lazy"></p>
+<p>选择左边LTS(长期支持版)下载，安装时无脑下一步即可</p>
+<p>安装完成之后会有两个组件，如图所示</p>
+<p><img src="2.png" alt="aaa" loading="lazy"></p>
+<p>可以顺带检查一下它们俩的版本，按下键盘的win + R键，在弹出面板输入cmd，打开dos命令窗口。</p>
+<p><img src="3.png" alt="aaa" loading="lazy"></p>
+<p>输入 npm -v 和 code -v</p>
+<p><img src="4.png" alt="aaa" loading="lazy"></p>
+<p>我们需要利用npm安装镜像包，但是因为国内的下载速度比较慢，所以我们需要下载一个cnpm淘宝的源</p>
+<p>在dos命令窗口中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>如果安装成功，可以在dos命令窗口输入cnpm检查一下</p>
+<p><img src="5.png" alt="aaa" loading="lazy"></p>
+<p>然后使用cnpm安装hexo框架</p>
+<p>在dos命令窗口输入cnpm install -g hexo-cli</p>
+<p>如果安装成功，可以在dos命令窗口输入hexo -v检查一下</p>
+<p><img src="6.png" alt="aaa" loading="lazy"></p>
+<p>那么你的环境已经配置好了，我们来正式搭建hexo博客</p>
+<p><strong>### 在本地创建hexo的博客</strong></p>
+<p>首先我们需要一个存放你博客的文件夹，所以第一步我们需要新建一个文件夹。</p>
+<p>举个栗子:C:\Users\fiower\Documents\blog这是我的文件夹路径</p>
+<p>我们终于可以创建自己的博客了(๑╹◡╹)ﾉ”””</p>
+<p>由于本人没有用过powershell（菜），所以接下来我们使用dos命令窗口(git bash）创建本地博客</p>
+<p>只需要两种方法选一即可(这里以dos命令窗口为例，git bash和dos命令窗口的指令是完全一样的，搭建时没必要纠结使用哪个)</p>
+<p><strong>##### 使用dos命令窗口</strong></p>
+<p>按下键盘的win + R键，在弹出面板输入cmd，打开dos命令窗口。</p>
+<p>这时路径默认是C:\Users\你的用户名字&gt;</p>
+<p>输入cd 你的博客所在路径 转入你的博客路径</p>
+<p><img src="7.png" alt="aaa" loading="lazy"></p>
+<p><strong>##### 使用git bash</strong></p>
+<p>在你的博客文件夹下按下右键，点击git bash</p>
+<p><img src="8.png" alt="aaa" loading="lazy"></p>
+<p><strong>### 开始创建本地博客</strong></p>
+<p>输入hexo init并按下回车等待</p>
+<p><img src="9.png" alt="aaa" loading="lazy"></p>
+<p><img src="10.png" alt="aaa" loading="lazy"></p>
+<p>这时你的目标文件夹就会多出一些文件</p>
+<p><img src="11.png" alt="aaa" loading="lazy"></p>
+<p>那么恭喜你，现在hexo博客已经配置完毕了（bushi</p>
+<p>继续在dos命令窗口输入hexo s并按下回车等待</p>
+<p><img src="12.png" alt="aaa" loading="lazy"></p>
+<p>如图所示，这时候出现了一个4000端口的网址</p>
+<p>让我们在浏览器内打开这个网址</p>
+<p><img src="13.png" alt="aaa" loading="lazy"></p>
+<p>我们的第一个本地博客就搭建好了</p>
+<p>但是你的程序还在运行着，这时候需要在dos窗口/git bash窗口中按下Ctrl + C键即可中断本地网址的建立（hexo s以后会用于博客写入新东西时的调试工作）</p>
+<p><img src="14.png" alt="aaa" loading="lazy"></p>
+<p>如果你没有成功到达这一步，不用害怕，只需要把你创建的文件夹*<strong>*干掉重来**</strong>即可，多试试几次总会成功的</p>
+<p><strong>### 将hexo博客同步到远端(Github)</strong></p>
+<p>我相信你已经非常兴奋而且想要把你的博客让朋友们看到，别急，现在我们就把自己的博客部署到远端</p>
+<p>接下来我们要把自己的博客部署到Github上(毫无疑问需要你的账号，没有的小伙伴需注册)</p>
+<p><img src="15.png" alt="aaa" loading="lazy"></p>
+<p>新建一个仓库</p>
+<p><strong><em>\</em>注意，用户部署个人博客的Github仓库的命名必须符合特定要求**</strong></p>
+<p><strong><em>\</em>必须是”你的Github的昵称.github.io”**</strong></p>
+<p><img src="16.png" alt="aaa" loading="lazy"></p>
+<p>建立了空仓库之后，我们需要装一个插件</p>
+<p>在命令行中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p><img src="17.png" alt="aaa" loading="lazy"></p>
+<p>然后用vscode打开你的blog的根目录_config.yml文件(没有安装vscode的话也可以选择记事本打开)</p>
+<p><img src="18.png" alt="aaa" loading="lazy"></p>
+<p>由于我没有新建空仓库，放一张CodeSheep的图片(这样获取你部署到远端的网址)</p>
+<p><img src="19.png" alt="aaa" loading="lazy"></p>
+<p>然后在dos命令窗口输入hexo d</p>
+<p>这样你的hexo博客就部署到了远端(所有人都可以用这个网址访问你的博客了)</p>
+<p><strong>### 美化自己的hexo博客</strong></p>
+<p>首先你需要下载一个博客的主题(如果你认为你的博客默认主题已经非常好看的了请忽略我说的话)</p>
+<p>我们以ad主题为例</p>
+<p>你需要先找见ad主题在github的网址，以便把这个主题克隆到自己的文件夹里面</p>
+<p>ad主题地址:<a target="_blank" rel="noopener" href="https://github.com/dongyuanxin/theme-ad">https://github.com/dongyuanxin/theme-ad</a></p>
+<p>然后我们需要在命令行中输入git clone <a target="_blank" rel="noopener" href="https://github.com/dongyuanxin/theme-ad.git">https://github.com/dongyuanxin/theme-ad.git</a> themes/ad</p>
+<p>这样就能把ad的主题文件克隆到你的themes文件夹里面了</p>
+<p><img src="20.png" alt="aaa" loading="lazy"></p>
+<p><img src="21.png" alt="aaa" loading="lazy"></p>
+<p>用vscode打开你的blog的根目录_config.yml文件，修改themes: landscape为themes: ad</p>
+<p>然后保存退出</p>
+<p>在命令行输入hexo s进行调试，打开4000端口</p>
+<p>(因为我没图片了就找我现在的充个数ヾ(ｏ･ω･)ﾉ)</p>
+<p><img src="22.png" alt="aaa" loading="lazy"></p>
+<p>然后输入hexo clean清楚临时缓存的文件，输入hexo d部署到远端</p>
+<p>这样我们的主题就修改好了</p>
+<p><strong>### 如何修改博客上的一些内容</strong></p>
+<p>这里的内容指的是超链接，修改博客文字内容等操作，可以使你的博客更加个性化(也许(っ•̀ω•́)っ✎⁾⁾)</p>
+<p>相信你已经发现了，blog的根目录_config.yml文件很重要，打开发现有很多设置的东西</p>
+<p>其实你themes目录下的主题也有_config.yml文件，只要你打开它，我相信你就会知道怎么使用它了(确信)</p>
+<p>加入超链接我还没学会，学会之后会把我的经验分享出来，所以本节未完待续(&gt;ω･* )ﾉ</p>
+<p><strong>### 如何写文章及在写文章时加入图片</strong></p>
+<p>我们只需在命令行输入hexo new “文章标题”就可以创建一个空文件夹了，然后可以打开改.md文件进行写入内容</p>
+<p><img src="23.png" alt="aaa" loading="lazy"></p>
+<p>那么问题来了，如何才能写出像我一样带有图片的文章呢？</p>
+<p>我们需要再下载一个插件</p>
+<p>我们需要打开git bash(dos也可以)输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>然后打开hexo的配置文件_config.yml</p>
+<p>找到 post_asset_folder，把这个选项从false改成true</p>
+<p>这样我们每次新建的文章都会带有一个同名的文件夹(原来的文件可以直接新建同名文件夹食用)</p>
+<p><img src="24.png" alt="aaa" loading="lazy"></p>
+<p>由于hexo文章是基于markdown语法写的，我们需要如何用markdown语法插入图片</p>
+<p>参考网址:<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a></p>
+<p>格式:<img src="%E7%85%A7%E7%89%87%E7%9A%84%E5%90%8D%E5%AD%97.%E7%85%A7%E7%89%87%E7%9A%84%E6%A0%BC%E5%BC%8F" alt="随便写" loading="lazy"></p>
+<p>比如我这篇文章就是这样写的:</p>
+<p><img src="25.png" alt="aaa" loading="lazy"></p>
+<p>这样就可以在文章中间加入图片了qwq</p>
+<p><strong>### 如何写文章及在写文章时加入音乐播放器</strong></p>
+<p>我相信有些人喜欢和我一样在博客中加入音乐播放器(显得有13格)，所以和我一起在自己的博客中加入这个好玩的东西吧</p>
+<p>由于是我自学的如何插入，本文只能简单的进行插入工作(菜)</p>
+<p>原文链接 <a target="_blank" rel="noopener" href="https://blog.csdn.net/thewindkee/article/details/55086735?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-4.control">https://blog.csdn.net/thewindkee/article/details/55086735?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-4.control</a></p>
+<p>我接下来展示如何在ad主题下添加网易云音乐播放器</p>
+<p>首先我们打开网页版网易云，选择一首你喜欢的歌曲</p>
+<p><img src="26.png" alt="aaa" loading="lazy"></p>
+<p>点击”生成外链播放器”</p>
+<p><img src="27.png" alt="aaa" loading="lazy"></p>
+<p>复制这个HTML代码</p>
+<p>然后打开路径 themes\ad\layout\partials下的head.ejs文件</p>
+<p>(选择head是为了让播放器放到博客的左上角，当然我们也可以选择这个文件夹的任意文件进行修改)</p>
+<p><img src="28.png" alt="aaa" loading="lazy"></p>
+<p>加入这段代码</p>
+<p><img src="29.png" alt="aaa" loading="lazy"></p>
+<p>这样播放器就可以部署到你的博客里面了，但是我们还需要调一下css样式</p>
+<p>打开路径 themes\ad\source\css</p>
+<p><img src="30.png" alt="aaa" loading="lazy"></p>
+<p><img src="31.png" alt="aaa" loading="lazy"></p>
+<p>.header-music {margin-top: 80px; }</p>
+<p>这样我们的播放器就可以部署到博客上了</p>
+<p><img src="32.png" alt="aaa" loading="lazy"></p>
+<p><strong>### 如何写文章及在写文章时加入音乐播放器(升级版)</strong></p>
+<p>由于我看了隔壁学长farewell的博客发现他的播放器和我上面配置的不一样(我的太菜了)</p>
+<p>所以我决定我也要搞一个，但是这个过程并不顺利。。。经过我艰苦卓绝的努力，终于找到一个教程，现在用我的方法呈现出来</p>
+<p>原文链接 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/fby698/p/12663089.html">https://www.cnblogs.com/fby698/p/12663089.html</a></p>
+<p>Aplayer官网文档：<a target="_blank" rel="noopener" href="https://aplayer.js.org/#/">https://aplayer.js.org/#/</a></p>
+<p>Metingjs官网文档：<a target="_blank" rel="noopener" href="https://github.com/metowolf/MetingJS">https://github.com/metowolf/MetingJS</a><br>| 选项                        | 默认        | 描述                                                         |<br>| ————————— | ———– | ———————————————————— |<br>| server(平台)                | <strong>require</strong> | 音乐平台：<code>netease</code>，<code>tencent</code>，<code>kugou</code>，<code>xiami</code>，<code>baidu</code>    |<br>| id(编号)                    | <strong>require</strong> | 歌曲ID /播放列表ID /专辑ID /搜索关键字                       |<br>| auto（支持类种 类）         | options     | 音乐链接，支持：<code>netease</code>，<code>tencent</code>，<code>xiami</code>                |<br>| type（类型）                | <strong>require</strong> | <code>song</code>，<code>playlist</code>，<code>album</code>，<code>search</code>，<code>artist</code>              |<br>| fixed（固定模式）           | <code>false</code>     | 启用固定模式，默认<code>false</code>                                    |<br>| mini（迷你模式）            | <code>false</code>     | 启用迷你模式,默认<code>false</code>                                     |<br>| autoplay（自动播放）        | <code>false</code>     | 音频自动播放，默认<code>false</code>                                    |<br>| theme(主题颜色)             | <code>#2980b9</code>   | 默认<code>#2980b9</code>                                                |<br>| loop（循环）                | <code>all</code>       | 播放器循环播放，值：“all”，one”，“none”                      |<br>| order(顺序)                 | <code>list</code>      | 播放器播放顺序，值：“list”，“random”                         |<br>| preload(加载)               | <code>auto</code>      | 值：“none”，“metadata”，“’auto”                              |<br>| volume（声量）              | <code>0.7</code>       | 默认音量，请注意播放器会记住用户设置，用户自己设置音量后默认音量将不起作用 |<br>| mutex（限制）               | <code>true</code>      | 防止同时播放多个玩家，在该玩家开始播放时暂停其他玩家         |<br>| lrc-type（歌词）            | <code>0</code>         | 歌词显示                                                     |<br>| list-folded（列表折叠）     | <code>false</code>     | 指示列表是否应该首先折叠                                     |<br>| list-max-height（最大高度） | <code>340px</code>     | 列出最大高度                                                 |<br>| storage-name（储存名称）    | <code>metingjs</code>  | 存储播放器设置的localStorage键                               |<br>然后在你博客的适当位置加入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">         &lt;!-- 引用Aplayer和metingjs --&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;aplayer@1.10.1&#x2F;dist&#x2F;APlayer.min.css&quot;&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;aplayer@1.10.1&#x2F;dist&#x2F;APlayer.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;meting@1.2.0&#x2F;dist&#x2F;Meting.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;my-aplayer&quot;</span><br><span class="line">	class&#x3D;&quot;aplayer&quot; </span><br><span class="line">	data-id&#x3D;&quot;706800324&quot; </span><br><span class="line">  data-server&#x3D;&quot;netease&quot; </span><br><span class="line">  data-mini&#x3D;&quot;false&quot;</span><br><span class="line">	data-type&#x3D;&quot;playlist&quot; </span><br><span class="line">	data-fixed&#x3D;&quot;false&quot; &#x2F;&#x2F; 吸底模式可以固定播放器于页面底部(这个底部指的是你屏幕下方，并非指的网页下方)</span><br><span class="line">	data-autoplay&#x3D;&quot;fals&quot; </span><br><span class="line">	data-order&#x3D;&quot;list&quot; </span><br><span class="line">  data-volume&#x3D;&quot;0.55&quot; </span><br><span class="line">  data-list-folded&#x3D;&quot;ture&quot;</span><br><span class="line">  data-theme&#x3D;&quot;#66CCFF&quot; </span><br><span class="line">  data-list-max-height&#x3D;&quot;340px&quot;</span><br><span class="line">  data-preload&#x3D;&quot;auto&quot; </span><br></pre></td></tr></table></figure>
+
+<p>**<u>适当位置</u>**指的是你博客的主界面的文件中的位置，举个栗子</p>
+<p>选择themes\ad\layout\partials\footer.ejs(因为我使用的ad主题，所以这里以ad主题为例，若使用其他主题，只需要点开对应主题的.ejs文件)</p>
+<p><img src="26.png" alt="aaa" loading="lazy"></p>
+<p>然后在适当位置加入代码(该代码在文件中的位置直接对应到播放器在你的博客页面的位置)</p>
+<p>比如我的就是在这里加的</p>
+<p><img src="27.png" alt="aaa" loading="lazy"></p>
+<p>需要注意的是，你这样拷贝的是我的播放器列表(当然用我的歌单我将感激不尽)，我相信你肯定想拥有一个属于自己的播放列表</p>
+<p>这里就拿网易云音乐举例，仔细看上面的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data-id&#x3D;&quot;706800324&quot; </span><br><span class="line">data-server&#x3D;&quot;netease&quot; </span><br></pre></td></tr></table></figure>
+
+<p>我相信你如果仔细看过上面的表格的话一定知道我想表达什么了(<del>可能</del>)</p>
+<p>你首先需要选择你需要播放的音乐平台，比如你想使用网易云，就在data-serve后面输入<code>netease</code>，你想使用qq音乐，就在data-serve后面输入<code>tencent</code>，以此类推。。。</p>
+<p>不管你是哪个平台的忠实听众，你的每个歌单都有属于它自己的id，你需要的是把这个id找到然后cv到你的data-id上</p>
+<p>接下来让我们看看这么才能找到你歌单的id</p>
+<p>首先打开网页版的网易云音乐，然后<del>登陆</del>，找到自己的歌单</p>
+<p><img src="28.png" alt="aaa" loading="lazy"></p>
+<p>看见最上方链接的那一串数字了没？那就是我们想要的东西</p>
+<p>赶快cv一下，然后粘贴替换掉上面我的id(<del>悲</del>)</p>
+<p>然后你的这段代码就是你自己的了，赶快hexo s试一试</p>
+<p>该播放器的更多使用方法在上方表格内都写出来了，如果看见代码里面没有的但是表格中确实有使用方法的，可以手动添加，在代码末端加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data-选项名称(英文)&#x3D;“ ”</span><br></pre></td></tr></table></figure>
+
+<p>这样达到你需要的目的，其他选项可以自行修改，更多使用方法请自行尝试(<del>因为那些也就改几个字的事情，没必要教</del>)</p>
+<p><strong>### 如何在博客中加入live_2d看板娘</strong></p>
+<p>因为我还没有学过HTML的用法，所以我只能部署一个比较简单的live_2d看板娘</p>
+<p>在命令行输入 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p> 安装</p>
+<p>但是这个live2d的插件真的一言难尽 (我和学长一致认为这个live2d插件自带的人物很少(<del>且不对我xp</del>)且不能自行添加)</p>
+<p>安装截图我就不放了，毕竟能看到这里的都安装过不下10次了吧(</p>
+<p>安装好了之后就可以去下载live2d文件了(其实你也可以边等边下载的)</p>
+<p>下载地址:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;EYHN&#x2F;hexo-helper-live2d&#x2F;blob&#x2F;master&#x2F;README.zh-CN.md</span><br></pre></td></tr></table></figure>
+
+<p>下载的文件是文件夹格式的，我们需要把它们移到（）文件路径中</p>
+<p>然后你还需要再次修改根目录中的_config.yml文件，修改代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-xxx  #这是你需要把模板放入的目录，在node_modules里，xxx表示你的live_2d的具体文件</span><br><span class="line">  display:</span><br><span class="line">    position: right      #放置在你的博客的左下还是右下</span><br><span class="line">    width: <span class="number">150</span> </span><br><span class="line">    height: <span class="number">300</span></span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">false</span>  #是否在手机进行显示</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>原文章代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  log: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
+
+<p>如图所示</p>
+<p>（）</p>
+<p>然后你就可以在命令行中输入hexo s来进行本地调试了</p>
+<p>选择一个你喜欢的live_2d吧ヾ(๑╹◡╹)ﾉ”</p>
+<p><strong>未完待续</strong></p>
+</div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Water-Boiled-fish</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="如何用hexo搭建自己的博客及美化自己的博客">http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%BE%8E%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></section></article><div class="post-nav"><div class="post-nav-item"></div><div class="post-nav-item"><a class="post-nav-next" href="/2020/11/19/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" rel="next" title="冒泡排序"><span class="post-nav-text">冒泡排序</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div id="comment"><div class="comment-tooltip text-center"><span>点击按钮跳转 GitHub Issues 评论。</span><br><span>若没有本文 Issue，您可以使用 Comment 模版新建。</span><br><a class="hty-button hty-button--raised" id="github-issues" target="_blank" rel="noopener" href="https://github.com/YunYouJun/yunyoujun.github.io/issues?q=is:issue+如何用hexo搭建自己的博客及美化自己的博客">GitHub Issues</a></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2020 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Water-Boiled-fish</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v5.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.3.0</span></div></footer><a class="hty-icon-button" id="goUp" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></div><script defer src="/js/utils.js"></script><script defer src="/js/hexo-theme-yun.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-z16"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
