@@ -18,7 +18,7 @@
   <meta name="description" content="力扣70. 爬楼梯题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="力扣70.爬楼梯">
-<meta property="og:url" content="http://example.com/2021/08/22/%E8%80%83%E6%A0%B82/index.html">
+<meta property="og:url" content="http://example.com/2021/08/22/%E5%8A%9B%E6%89%A370.%E7%88%AC%E6%A5%BC%E6%A2%AF/index.html">
 <meta property="og:site_name" content="Little_Flower_Fa">
 <meta property="og:description" content="力扣70. 爬楼梯题解">
 <meta property="og:locale">
@@ -190,7 +190,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int climbStairs(int n) &#123;</span><br><span class="line">        if(n == 0) return 1;</span><br><span class="line">        if(n == 1) return 1;</span><br><span class="line"></span><br><span class="line">        return climbStairs(n - 1)+climbStairs(n - 2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果</p>
-<p><img src="/2021/08/22/%E8%80%83%E6%A0%B82/02.png"></p>
+<p><img src="/2021/08/22/%E5%8A%9B%E6%89%A370.%E7%88%AC%E6%A5%BC%E6%A2%AF/02.png"></p>
 <p>漂亮，超时了</p>
 <p>那么就是我们在递归的过程中大量的重复运算了之前的数据，那我们可以用动态规划来优化</p>
 <p>动态规划是什么？就是缓存了一堆数据的迭代，我们把之前计算过的结果缓存下来，就可以减少运算量</p>
@@ -199,7 +199,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//声明个数组储存之前计算过的结果</span></span><br><span class="line">        <span class="keyword">int</span> size = <span class="number">10000</span>;</span><br><span class="line">        <span class="keyword">int</span>[] f = <span class="keyword">new</span> <span class="keyword">int</span>[size];</span><br><span class="line">        <span class="comment">//设置初始值</span></span><br><span class="line">        f[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        f[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//把递归改成迭代</span></span><br><span class="line">        <span class="comment">//注意上面有了0和1的结果，要保证n=2时可以进入该循环</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            f[i] = f[i - <span class="number">1</span>] + f[i - <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> f[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果</p>
-<p><img src="/2021/08/22/%E8%80%83%E6%A0%B82/04.png"></p>
+<p><img src="/2021/08/22/%E5%8A%9B%E6%89%A370.%E7%88%AC%E6%A5%BC%E6%A2%AF/04.png"></p>
 
         </div>
         
@@ -253,7 +253,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2021/08/22/%E8%80%83%E6%A0%B82/",
+                text: "http://example.com/2021/08/22/%E5%8A%9B%E6%89%A370.%E7%88%AC%E6%A5%BC%E6%A2%AF/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -265,7 +265,7 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2021/08/22/%E8%80%83%E6%A0%B82/";
+            const hostUrl       = "http://example.com/2021/08/22/%E5%8A%9B%E6%89%A370.%E7%88%AC%E6%A5%BC%E6%A2%AF/";
             const title         = "「力扣70.爬楼梯」";
             const excerpt       = `力扣70. 爬楼梯题解`;
             let _URL;
@@ -298,12 +298,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 力扣94. 二叉树的中序遍历" href="/2021/08/22/考核/">&lt; 上一篇</a>
+                <a title=" surface go 开箱测评" href="/2021/08/15/surface go/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" 力扣13.罗马数字转整数" href="/2021/08/23/考核3/">下一篇 &gt;</a>
+                <a title=" 力扣94. 二叉树的中序遍历" href="/2021/08/22/力扣94. 二叉树的中序遍历/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -364,25 +364,25 @@
         
           
           
-            <a class="list-group-item" href="/2021/08/24/%E8%80%83%E6%A0%B84/"><i class="fa  fa-book"></i> 力扣417.太平洋大西洋水流问题</a>
+            <a class="list-group-item" href="/2021/08/24/%E5%8A%9B%E6%89%A3417.%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%A4%A7%E8%A5%BF%E6%B4%8B%E6%B0%B4%E6%B5%81%E9%97%AE%E9%A2%98/"><i class="fa  fa-book"></i> 力扣417.太平洋大西洋水流问题</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/08/23/%E8%80%83%E6%A0%B83/"><i class="fa  fa-book"></i> 力扣13.罗马数字转整数</a>
+            <a class="list-group-item" href="/2021/08/23/%E5%8A%9B%E6%89%A313.%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/"><i class="fa  fa-book"></i> 力扣13.罗马数字转整数</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/08/22/%E8%80%83%E6%A0%B82/"><i class="fa  fa-book"></i> 力扣70.爬楼梯</a>
+            <a class="list-group-item" href="/2021/08/22/%E5%8A%9B%E6%89%A394.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"><i class="fa  fa-book"></i> 力扣94. 二叉树的中序遍历</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/08/22/%E8%80%83%E6%A0%B8/"><i class="fa  fa-book"></i> 力扣94. 二叉树的中序遍历</a>
+            <a class="list-group-item" href="/2021/08/22/%E5%8A%9B%E6%89%A370.%E7%88%AC%E6%A5%BC%E6%A2%AF/"><i class="fa  fa-book"></i> 力扣70.爬楼梯</a>
             
           
         
